@@ -5,8 +5,8 @@ from pydub import AudioSegment
 import os
 from dotenv import load_dotenv
 
-load_dotenv()
-api_key = os.getenv('OPENAI_API_KEY')
+# load_dotenv()
+api_key = st.secrets["OPENAI_API_KEY"] #= os.getenv('OPENAI_API_KEY')
 
 
 def split_into_chunks(text, chunk_size=5):
